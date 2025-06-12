@@ -4,7 +4,7 @@ description: This is a JavaScript tutorial for beginners.
 slug: JsTutorial
 date: 29/03/2025
 author: John Doe
-image: ../images/js-tutorial.png
+image: /images/TailwindCSS.jpg
 ---
 
 # Introduction to JavaScript

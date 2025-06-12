@@ -27,17 +27,17 @@ export default async function Page({ params }) {
         .use(rehypeDocument, { title: '👋🌍' })
         .use(rehypeFormat)
         .use(rehypeStringify)
-        .use(rehypePrettyCode,{
-            theme:"github-dark",
+        .use(rehypePrettyCode, {
+            theme: "github-dark",
             transformers: [
                 transformerCopyButton({
-                  visibility: 'always',
-                  feedbackDuration: 3_000,
+                    visibility: 'always',
+                    feedbackDuration: 3_000,
                 }),
-              ],
+            ],
         })
 
-    const htmlContnet= (await processer.process(content)).toString()
+    const htmlContnet = (await processer.process(content)).toString()
     return (
         <div className="mx-auto p-4 max-w-5xl">
             <h1 className="text-3xl font-bold mb-4">{data.title}</h1>
@@ -46,7 +46,11 @@ export default async function Page({ params }) {
                 <p className="text-sm text-gray-500 mb-4 italic">{data.author}</p>
                 <p className="text-sm text-gray-500 mb-4">{data.date}</p>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: htmlContnet }} className="prose dark:prose-invert"></div>
+            <div
+                dangerouslySetInnerHTML={{ __html: htmlContnet }}
+                className="prose dark:prose-invert [&_pre]:overflow-x-auto [&_pre]:p-4 [&_pre]:rounded-md [&_pre]:bg-gray-800"
+            ></div>
+
         </div>
     )
 }

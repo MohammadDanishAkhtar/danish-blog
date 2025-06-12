@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button} from '@/components/ui/button'
+import Image from 'next/image';
 export default function Home() {
   return (
     <main>
@@ -17,7 +18,9 @@ export default function Home() {
           </p>
         </div>
         <div className="w-full mt-8 lg:mt-0 lg:w-1/2">
-          <img
+          <Image
+          width={100}
+          height={100}
             src="https://www.creative-tim.com/twcomponents/svg/website-designer-bro-purple.svg"
             alt="tailwind css components"
             className="w-full h-auto max-w-md mx-auto"

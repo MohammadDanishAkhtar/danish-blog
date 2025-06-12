@@ -3,17 +3,18 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import Image from "next/image";
 
-// This is a **server component**
-const dirContent = fs.readdirSync("content", "utf-8")
-  
-  const blog = dirContent.map(file => {
-  const fileContent = fs.readFileSync(`content/${file}`, "utf-8")
-  const {data}=matter(fileContent)
-  return data
+// This must be a server component for fs
+export default function Blog() {
+  const files = fs.readdirSync("content", "utf-8");
 
-})
-export default async function Page() {
+  const blogs = files.map((filename) => {
+    const fileContent = fs.readFileSync(path.join("content", filename), "utf-8");
+    const { data } = matter(fileContent);
+    return data;
+  });
+
   return (
     <main className="container mx-auto px-4 py-12">
       <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white">
@@ -24,13 +25,15 @@ export default async function Page() {
       </p>
 
       <div className="grid gap-8 mt-10 sm:grid-cols-2 lg:grid-cols-3">
-        {blog.map((blog, index) => (
+        {blogs.map((blog, index) => (
           <div
             key={index}
             className="group overflow-hidden rounded-lg shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:-translate-y-2 hover:shadow-2xl"
           >
-            <img
+            <Image
               src={blog.image}
+              height={500}
+              width={500}
               alt={blog.title}
               className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -38,8 +41,11 @@ export default async function Page() {
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
                 {blog.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mt-2">{blog.description}</p>
-              <Link className={buttonVariants({ variant: "outline" })} href={`/blogpost/${blog.slug}`}>
+              <p className="text-gray-600 dark:text-gray-300 mt-2 mb-2">{blog.description}</p>
+              <Link
+                className={buttonVariants({ variant: "outline" })}
+                href={`/blogpost/${blog.slug}`}
+              >
                 Read more
               </Link>
             </div>

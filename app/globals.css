@@ -169,3 +169,13 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+
+.prose pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background-color: #1f2937;
+  /* Tailwind: bg-gray-800 */
+  border-radius: 0.5rem;
+  color: white;
+}
