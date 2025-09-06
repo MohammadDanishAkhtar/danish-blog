@@ -4,7 +4,7 @@ description: "A comprehensive comparison between Next.js and React to help you d
 slug: "NextJsvsReactJs"
 date: "2025-04-03"
 author: "Your Name"
-image: /images/TailwindCSS.jpg
+image: /images/next-vs-react.jpg
 
 ---
 

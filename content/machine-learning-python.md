@@ -5,7 +5,7 @@ description: "An introduction to machine learning using Python, covering key con
 slug: "machine-learning-python"
 date: "2025-04-03"
 author: "Your Name"
-image: /images/TailwindCSS.jpg
+image: /images/python.jpg
 ------------------------------
 
 # Machine Learning with Python
