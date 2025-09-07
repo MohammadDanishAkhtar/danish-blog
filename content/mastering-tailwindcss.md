@@ -3,7 +3,7 @@ title: "Mastering TailwindCSS"
 description: "A complete guide to mastering TailwindCSS for rapid UI development."
 slug: "mastering-tailwindcss"
 date: "2025-04-03"
-author: "Your Name"
+author: "Mohammad Danish"
 image: /images/TailwindCSS.jpg
 
 ---

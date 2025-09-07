@@ -4,7 +4,7 @@ title: "Machine Learning with Python"
 description: "An introduction to machine learning using Python, covering key concepts, types of ML, and practical hands-on examples."
 slug: "machine-learning-python"
 date: "2025-04-03"
-author: "Your Name"
+author: "MOhammad Danish"
 image: /images/python.jpg
 ------------------------------
 

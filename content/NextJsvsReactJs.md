@@ -3,7 +3,7 @@ title: "Next.js vs React: Which One Should You Choose?"
 description: "A comprehensive comparison between Next.js and React to help you decide which one is best for your project."
 slug: "NextJsvsReactJs"
 date: "2025-04-03"
-author: "Your Name"
+author: "Mohammad Danish"
 image: /images/next-vs-react.jpg
 
 ---

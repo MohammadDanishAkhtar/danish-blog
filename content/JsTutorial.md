@@ -3,7 +3,7 @@ title: JavaScript Tutorial
 description: This is a JavaScript tutorial for beginners.
 slug: JsTutorial
 date: 29/03/2025
-author: John Doe
+author: Mohammad Danish
 image: /images/javascript.jpg
 ---
 

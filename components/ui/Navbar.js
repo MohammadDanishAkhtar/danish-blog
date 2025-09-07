@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -27,7 +26,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-4 items-center">
           <Link href="/" className={linkClasses}>Home</Link>
           <Link href="/about" className={linkClasses}>About</Link>
-          <Link href="/blog" className={linkClasses}>Blog</Link>
+          <Link href="/blog" className={linkClasses}>Blogs</Link>
           <ModeToggle />
         </div>
       </div>
